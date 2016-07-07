@@ -9,8 +9,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class EXRootViewController;
+@class RCTBridge;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (nonatomic, strong) UIWindow *window;
+
+@property (strong, nonatomic) EXRootViewController *rootViewController;
+@property (strong, nonatomic) UINavigationController *navigationController;
+@property (strong, nonatomic) RCTBridge *bridge;
 
 @end

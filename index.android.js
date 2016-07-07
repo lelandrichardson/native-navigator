@@ -1,52 +1,184 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
+  TouchableOpacity,
   Text,
-  View
+  View,
 } from 'react-native';
+import Navigator from './js/NavigatorModule';
 
-class native_navigator extends Component {
+
+class ScreenOne extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
+      <Navigator.Scene
+        title="ScreenOne"
+        rightTitle="Next"
+        menuItems={[
+
+        ]}
+        onAppear={(isFirstMount) => console.log("IM VISIBLE!")}
+        onDisappear={(isFirstMount) => console.log("IM INVISIBLE!")}
+        onRightPress={() => console.log('onRightPress!')}
+      >
+        <View style={[styles.screen, styles.screen1]}>
+          <Text>I am ScreenOne</Text>
+          <TouchableOpacity onPress={() => Navigator.push('ScreenTwo')}>
+            <Text>Push ScreenTwo</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.push('NativeExample')}>
+            <Text>Push NativeExample</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.push('TabExample')}
+          >
+            <Text>Push TabExample</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.present('ModalOne')}>
+            <Text>Present ModalOne</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.pop()}>
+            <Text>Pop Me</Text>
+          </TouchableOpacity>
+        </View>
+      </Navigator.Scene>
+    );
+  }
+}
+
+class ScreenTwo extends Component {
+  render() {
+    return (
+      <Navigator.Scene title="ScreenTwo">
+        <View style={[styles.screen, styles.screen2]}>
+          <Text>I am ScreenTwo</Text>
+          <TouchableOpacity onPress={() => Navigator.push('ScreenOne')}>
+            <Text>Push ScreenOne</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.push('NativeExample', { initialTab: 'TabTwo'})}>
+            <Text>Push NativeExample</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.push('TabExample')}>
+            <Text>Push TabExample</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.pop()}>
+            <Text>Pop Me</Text>
+          </TouchableOpacity>
+        </View>
+      </Navigator.Scene>
+    );
+  }
+}
+
+class TabOne extends Component {
+  render() {
+    return (
+      <Navigator.Scene title="TabOne">
+        <View style={[styles.screen, styles.screen2]}>
+          <Text>I am TabOne</Text>
+          <TouchableOpacity onPress={() => Navigator.setTabIndex(1)}>
+            <Text>Go to TabTwo</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.push('ScreenOne')}>
+            <Text>Push ScreenOne</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.push('ScreenTwo')}>
+            <Text>Push ScreenOne</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.push('NativeExample')}>
+            <Text>Push NativeExample</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.pop()}>
+            <Text>Pop Me</Text>
+          </TouchableOpacity>
+        </View>
+      </Navigator.Scene>
+    );
+  }
+}
+
+class TabTwo extends Component {
+  render() {
+    return (
+      <Navigator.Scene title="TabTwo">
+        <View style={[styles.screen, styles.screen1]}>
+          <Text>I am TabTwo</Text>
+          <TouchableOpacity onPress={() => Navigator.setTabIndex(0)}>
+            <Text>Go to TabOne</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.push('ScreenOne')}>
+            <Text>Push ScreenOne</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.push('ScreenTwo')}>
+            <Text>Push ScreenOne</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.push('NativeExample')}>
+            <Text>Push NativeExample</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.pop()}>
+            <Text>Pop Me</Text>
+          </TouchableOpacity>
+        </View>
+      </Navigator.Scene>
+    );
+  }
+}
+
+class ModalOne extends Component {
+  render() {
+    return (
+      <Navigator.Scene title="ModalOne">
+        <View style={[styles.screen, { backgroundColor: 'orange' }]}>
+          <Text>I am ModalOne</Text>
+          <TouchableOpacity onPress={() => Navigator.dismiss()}>
+            <Text>Dismiss!</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.push('ScreenOne')}>
+            <Text>Push ScreenOne</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.push('ScreenTwo')}>
+            <Text>Push ScreenOne</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.push('NativeExample')}>
+            <Text>Push NativeExample</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigator.pop()}>
+            <Text>Pop Me</Text>
+          </TouchableOpacity>
+        </View>
+      </Navigator.Scene>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  screen: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  screen1: {
+    backgroundColor: 'red',
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  screen2: {
+    backgroundColor: 'green',
   },
 });
 
-AppRegistry.registerComponent('native_navigator', () => native_navigator);
+
+//Navigator.createTabScene([
+//  { component: 'ScreenOne' },
+//]);
+
+//registerSceneWithReduxStore(store, 'ScreenName', Screen);
+
+
+//Navigator.registerScene('ScreenOneOrLogin', function Component(props) {
+//  return props.hasTrips ? <ScreenOne /> : <ScreenTwo />
+//});
+
+Navigator.registerScene('ScreenOne', ScreenOne);
+Navigator.registerScene('ScreenTwo', ScreenTwo);
+Navigator.registerScene('TabOne', TabOne);
+Navigator.registerScene('TabTwo', TabTwo);
+Navigator.registerScene('ModalOne', ModalOne);

@@ -21,6 +21,14 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		30BE336266F4D665FDD8B60E /* EXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE3904BF19167C9237E07B /* EXTabBarController.m */; };
+		30BE3457DFE5AEF8E78E41C2 /* RNNCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE370B026AF7AA840CBB66 /* RNNCoordinator.m */; };
+		30BE356634054FC0BEE6407F /* EXNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE30CBA470721F6DECD22D /* EXNativeViewController.m */; };
+		30BE3A7C98AE5A7A52234A95 /* NativeNavigator in Resources */ = {isa = PBXBuildFile; fileRef = 30BE3B857ED210A5538317FC /* NativeNavigator */; };
+		30BE3BDE83DD3DD64108C5BF /* Example in Resources */ = {isa = PBXBuildFile; fileRef = 30BE3437A4089DE82FD38FB5 /* Example */; };
+		30BE3C30D6790590DFA23AC8 /* EXRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE31827E827FF8CA96AF01 /* EXRootViewController.m */; };
+		30BE3D56F79F869F096E6CD5 /* RNNNavigatorModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE38B0EA5B61CEAD86D02C /* RNNNavigatorModule.m */; };
+		30BE3FFA79BA9F6CBE5435CF /* RNNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE31317AF54EC5B2B278FA /* RNNViewController.m */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
 
@@ -106,16 +114,16 @@
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.jsbundle; path = main.jsbundle; sourceTree = "<group>"; };
-		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = ../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj; sourceTree = "<group>"; };
-		00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTGeolocation.xcodeproj; path = ../node_modules/react-native/Libraries/Geolocation/RCTGeolocation.xcodeproj; sourceTree = "<group>"; };
-		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = ../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj; sourceTree = "<group>"; };
-		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = ../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj; sourceTree = "<group>"; };
-		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = ../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj; sourceTree = "<group>"; };
+		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = "../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj"; sourceTree = "<group>"; };
+		00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTGeolocation.xcodeproj; path = "../node_modules/react-native/Libraries/Geolocation/RCTGeolocation.xcodeproj"; sourceTree = "<group>"; };
+		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
+		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
+		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* native_navigatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = native_navigatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* native_navigatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = native_navigatorTests.m; sourceTree = "<group>"; };
-		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = ../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj; sourceTree = "<group>"; };
-		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = ../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj; sourceTree = "<group>"; };
+		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
+		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* native_navigator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = native_navigator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = native_navigator/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = native_navigator/AppDelegate.m; sourceTree = "<group>"; };
@@ -123,9 +131,24 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = native_navigator/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = native_navigator/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = native_navigator/main.m; sourceTree = "<group>"; };
-		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = ../node_modules/react-native/React/React.xcodeproj; sourceTree = "<group>"; };
-		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = ../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj; sourceTree = "<group>"; };
-		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = ../node_modules/react-native/Libraries/Text/RCTText.xcodeproj; sourceTree = "<group>"; };
+		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		30BE30CBA470721F6DECD22D /* EXNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXNativeViewController.m; path = Example/EXNativeViewController.m; sourceTree = "<group>"; };
+		30BE31317AF54EC5B2B278FA /* RNNViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNNViewController.m; path = NativeNavigator/RNNViewController.m; sourceTree = "<group>"; };
+		30BE31827E827FF8CA96AF01 /* EXRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXRootViewController.m; path = Example/EXRootViewController.m; sourceTree = "<group>"; };
+		30BE3437A4089DE82FD38FB5 /* Example */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Example; sourceTree = "<group>"; };
+		30BE353B7DC7ED4A04C2C03A /* RNNViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNNViewController.h; path = NativeNavigator/RNNViewController.h; sourceTree = "<group>"; };
+		30BE365A94034350C22373C9 /* RNNCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNNCoordinator.h; path = NativeNavigator/RNNCoordinator.h; sourceTree = "<group>"; };
+		30BE370B026AF7AA840CBB66 /* RNNCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNNCoordinator.m; path = NativeNavigator/RNNCoordinator.m; sourceTree = "<group>"; };
+		30BE384D0985E960A3403822 /* RNNNavigatorModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNNNavigatorModule.h; path = NativeNavigator/RNNNavigatorModule.h; sourceTree = "<group>"; };
+		30BE38B0EA5B61CEAD86D02C /* RNNNavigatorModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNNNavigatorModule.m; path = NativeNavigator/RNNNavigatorModule.m; sourceTree = "<group>"; };
+		30BE3904BF19167C9237E07B /* EXTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTabBarController.m; path = Example/EXTabBarController.m; sourceTree = "<group>"; };
+		30BE39D4A36204B00A601927 /* EXNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXNativeViewController.h; path = Example/EXNativeViewController.h; sourceTree = "<group>"; };
+		30BE3B857ED210A5538317FC /* NativeNavigator */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NativeNavigator; sourceTree = "<group>"; };
+		30BE3BA63C85032B09799E04 /* EXTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTabBarController.h; path = Example/EXTabBarController.h; sourceTree = "<group>"; };
+		30BE3CD191CA59303F18820E /* EXRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXRootViewController.h; path = Example/EXRootViewController.h; sourceTree = "<group>"; };
+		30BE3D6F3B0B92EFDBD9D431 /* RNNCoordinatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNNCoordinatorDelegate.h; path = NativeNavigator/RNNCoordinatorDelegate.h; sourceTree = "<group>"; };
+		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +314,21 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* native_navigatorTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				30BE3437A4089DE82FD38FB5 /* Example */,
+				30BE3B857ED210A5538317FC /* NativeNavigator */,
+				30BE31827E827FF8CA96AF01 /* EXRootViewController.m */,
+				30BE3CD191CA59303F18820E /* EXRootViewController.h */,
+				30BE38B0EA5B61CEAD86D02C /* RNNNavigatorModule.m */,
+				30BE384D0985E960A3403822 /* RNNNavigatorModule.h */,
+				30BE31317AF54EC5B2B278FA /* RNNViewController.m */,
+				30BE353B7DC7ED4A04C2C03A /* RNNViewController.h */,
+				30BE370B026AF7AA840CBB66 /* RNNCoordinator.m */,
+				30BE365A94034350C22373C9 /* RNNCoordinator.h */,
+				30BE3D6F3B0B92EFDBD9D431 /* RNNCoordinatorDelegate.h */,
+				30BE3904BF19167C9237E07B /* EXTabBarController.m */,
+				30BE3BA63C85032B09799E04 /* EXTabBarController.h */,
+				30BE30CBA470721F6DECD22D /* EXNativeViewController.m */,
+				30BE39D4A36204B00A601927 /* EXNativeViewController.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -507,6 +545,8 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				30BE3BDE83DD3DD64108C5BF /* Example in Resources */,
+				30BE3A7C98AE5A7A52234A95 /* NativeNavigator in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +585,12 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				30BE3C30D6790590DFA23AC8 /* EXRootViewController.m in Sources */,
+				30BE3D56F79F869F096E6CD5 /* RNNNavigatorModule.m in Sources */,
+				30BE3FFA79BA9F6CBE5435CF /* RNNViewController.m in Sources */,
+				30BE3457DFE5AEF8E78E41C2 /* RNNCoordinator.m in Sources */,
+				30BE336266F4D665FDD8B60E /* EXTabBarController.m in Sources */,
+				30BE356634054FC0BEE6407F /* EXNativeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,12 +656,12 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 				);
-				INFOPLIST_FILE = "native_navigator/Info.plist";
+				INFOPLIST_FILE = native_navigator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-        OTHER_LDFLAGS = (
-          "-ObjC",
-          "-lc++",
-        );
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_NAME = native_navigator;
 			};
 			name = Debug;
@@ -629,12 +675,12 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 				);
-				INFOPLIST_FILE = "native_navigator/Info.plist";
+				INFOPLIST_FILE = native_navigator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-        OTHER_LDFLAGS = (
-          "-ObjC",
-          "-lc++",
-        );
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_NAME = native_navigator;
 			};
 			name = Release;
